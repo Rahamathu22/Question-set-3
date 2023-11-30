@@ -10,7 +10,7 @@ namespace QuestionSet3
     {
         static void Main(string[] args)
         {
-            ForQ7();
+            ForQ9();
         }
 
         public static int GetInteger(string message)
@@ -298,6 +298,119 @@ namespace QuestionSet3
                 i++;
             }
             while (i <= 100);
+        }
+
+        public static void ForQ8()
+        {
+            int Number = GetInteger("Enter a Number");
+            for (int i = 1; i <= 20; i++)
+            {
+                Console.WriteLine(i*Number);
+            }
+        }
+
+        public static void WhileQ8()
+        {
+            int Number = GetInteger("Enter a Number");
+            int i = 1;
+            while (i <= 20)
+            {
+                Console.WriteLine(i*Number);
+                i++;
+            }
+        }
+
+        public static void DoQ8()
+        {
+            int Number = GetInteger("Enter a Number");
+            int i = 1;
+            do
+            {
+                Console.WriteLine(i * Number);
+                i++;
+            }
+            while (i <= 20);
+        }
+
+        public static void ForQ9()
+        {
+            for (int i = 1; i <= 5; i++)
+            {
+                for (int j = 1; j <= 20; j++)
+                {
+                    Console.WriteLine(j + "X" + i + "=" + i * j);
+                }
+            }
+        }
+
+        public static void WhileQ9()
+        {
+            int i = 1;
+            int j = 1;
+            while (i <= 5)
+            {
+                while (j <= 20)
+                {
+                    Console.WriteLine(j + "X" + i + "=" + i * j);
+                    j++;
+                }
+                i++;
+            }
+        }
+
+        public static void DoQ9()
+        {
+            int i = 1;
+            int j = 1;
+            do
+            {
+                do
+                {
+                    Console.WriteLine(j + "X" + i + "=" + i * j);
+                    j++;
+                }
+                while (j <= 20);
+                i++;
+            }
+            while (i <= 5);
+        }
+
+        public static void ForQ10()
+        {
+            int Number = GetInteger("Enter a Number");
+            int sum = 0;
+            for (int i = 1; i <= Number; i++)
+            {
+                sum = sum + i;
+            }
+            Console.WriteLine("The sum of numbers is:"+sum);
+        }
+
+        public static void WhileQ10()
+        {
+            int Number = GetInteger("Enter a Number");
+            int sum = 0;
+            int i = 1;
+            while (i <= Number)
+            {
+                sum = sum + i;
+                i++;
+            }
+            Console.WriteLine("The sum of numbers is:"+sum);
+        }
+
+        public static void DoQ10()
+        {
+            int Number = GetInteger("Enter a Number");
+            int sum = 0;
+            int i = 1;
+            do
+            {
+                sum = sum + i;
+                i++;
+            }
+            while (i <= Number);
+            Console.WriteLine("The sum of numbers is:"+sum);
         }
     }
  }
