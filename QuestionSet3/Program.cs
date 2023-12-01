@@ -10,7 +10,7 @@ namespace QuestionSet3
     {
         static void Main(string[] args)
         {
-            ForQ17();
+            WhileQ18();
         }
 
         public static int GetInteger(string message)
@@ -718,9 +718,90 @@ namespace QuestionSet3
             {
                 int Scores=GetInteger("Enter the score in round"+i+":");
                 sum = sum + Scores;
-                Console.WriteLine("The score in round "+i+"is:"+sum);
+                Console.WriteLine("The score in round "+i+" is:"+sum);
             }
             Console.WriteLine("The final score is:"+sum);
+        }
+
+        public static void WhileQ17()
+        {
+            int Number = GetInteger("Enter a Number of rounds in the match:");
+            int sum = 0;
+            int i = 1;
+            while (i <= Number)
+            {
+                int Scores = GetInteger("Enter the score in round" + i + ":");
+                sum = sum + Scores;
+                Console.WriteLine("The score in round " + i + " is:" + sum);
+                i++;
+            }
+            Console.WriteLine("The final score is:" + sum);
+        }
+
+        public static void DoQ17()
+        {
+            int Number = GetInteger("Enter a Number of rounds in the match:");
+            int sum = 0;
+            int i = 1;
+            do
+            {
+                int Scores = GetInteger("Enter the score in round" + i + ":");
+                sum = sum + Scores;
+                Console.WriteLine("The score in round " + i + " is:" + sum);
+                i++;
+            }
+            while (i <= Number);
+            Console.WriteLine("The final score is:" + sum);
+        }
+
+        public static void WhileQ18()
+        {
+            bool value = true;
+            while(value)
+            {
+            Console.WriteLine("1.Addition");
+            Console.WriteLine("2.Substraction");
+            Console.WriteLine("3.Multiplication");
+            Console.WriteLine("4.Division");
+            Console.WriteLine("5.Quit");
+            int Number = GetInteger("Enter a Number to perform such operation:");
+            switch (Number)
+                {
+                    case 1:
+                        {
+                            int FirstValue = GetInteger("Enter the first value:");
+                            int SecondValue = GetInteger("Enter the second value:");
+                            Console.WriteLine(FirstValue + SecondValue);
+                            break;
+                        }
+                    case 2:
+                        {
+                            int FirstValue = GetInteger("Enter the first value:");
+                            int SecondValue = GetInteger("Enter the second value:");
+                            Console.WriteLine(FirstValue - SecondValue);
+                            break;
+                        }
+                    case 3:
+                        {
+                            int FirstValue = GetInteger("Enter the first value:");
+                            int SecondValue = GetInteger("Enter the second value:");
+                            Console.WriteLine(FirstValue * SecondValue);
+                            break;
+                        }
+                    case 4:
+                        {
+                            int FirstValue = GetInteger("Enter the first value:");
+                            int SecondValue = GetInteger("Enter the second value:");
+                            Console.WriteLine(FirstValue / SecondValue);
+                            break;
+                        }
+                    case 5:
+                        {
+                            value = false;
+                            break;
+                        }
+                }
+            }
         }
     }
  }
