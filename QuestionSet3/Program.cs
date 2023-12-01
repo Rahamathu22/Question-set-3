@@ -10,7 +10,7 @@ namespace QuestionSet3
     {
         static void Main(string[] args)
         {
-            ForQ14();
+            ForQ17();
         }
 
         public static int GetInteger(string message)
@@ -660,6 +660,67 @@ namespace QuestionSet3
             }
             while (i <= Number);
             Console.WriteLine("The factorial of the given number is:" + Fact);
+        }
+
+        public static void ForQ16()
+        {
+            int Number = GetInteger("Enter a Number of subjects in this current semester:");
+            int sum = 0;
+            for (int i = 1; i <= Number; i++)
+            {
+                int Marks = GetInteger("Enter a Mark in subject"+i+":");
+                sum = sum + Marks;
+            }
+            int avrg = sum / Number;
+            Console.WriteLine("The total marks is:"+sum);
+            Console.WriteLine("The average is:"+avrg);
+        }
+
+
+        public static void WhileQ16()
+        {
+            int Number = GetInteger("Enter a Number of subjects in this current semester:");
+            int sum = 0;
+            int i = 0;
+            while (i <= Number)
+            {
+                int Marks = GetInteger("Enter a Mark in subject" + i + ":");
+                sum = sum + Marks;
+                i++;
+            }
+            int avrg = sum / Number;
+            Console.WriteLine("The total marks is:" + sum);
+            Console.WriteLine("The average is:" + avrg);
+        }
+
+        public static void DoQ16()
+        {
+            int Number = GetInteger("Enter a Number of subjects in this current semester:");
+            int sum = 0;
+            int i = 0;
+            do
+            {
+                int Marks = GetInteger("Enter a Mark in subject" + i + ":");
+                sum = sum + Marks;
+                i++;
+            }
+            while (i <= Number);
+            int avrg = sum / Number;
+            Console.WriteLine("The total marks is:" + sum);
+            Console.WriteLine("The average is:" + avrg);
+        }
+
+        public static void ForQ17()
+        {
+            int Number = GetInteger("Enter a Number of rounds in the match:");
+            int sum = 0;
+            for(int i=1;i<=Number;i++)
+            {
+                int Scores=GetInteger("Enter the score in round"+i+":");
+                sum = sum + Scores;
+                Console.WriteLine("The score in round "+i+"is:"+sum);
+            }
+            Console.WriteLine("The final score is:"+sum);
         }
     }
  }
