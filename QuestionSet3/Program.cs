@@ -10,7 +10,7 @@ namespace QuestionSet3
     {
         static void Main(string[] args)
         {
-            ForQ9();
+            ForQ14();
         }
 
         public static int GetInteger(string message)
@@ -411,6 +411,255 @@ namespace QuestionSet3
             }
             while (i <= Number);
             Console.WriteLine("The sum of numbers is:"+sum);
+        }
+
+        public static void ForQ11()
+        {
+            int Number = GetInteger("Enter a Number");
+            int sum = 0;
+            for (int i = 1; i <= Number; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    sum = sum + i;
+                }
+            }
+            Console.WriteLine("The sum of numbers is:" + sum);
+        }
+
+        public static void WhileQ11()
+        {
+            int Number = GetInteger("Enter a Number");
+            int sum = 0;
+            int i = 1;
+            while (i <= Number)
+            {
+                if (i % 2 == 0)
+                {
+                    sum = sum + i;
+                }
+                i++;
+            }
+            Console.WriteLine("The sum of numbers is:" + sum);
+        }
+
+        public static void DoQ11()
+        {
+            int Number = GetInteger("Enter a Number");
+            int sum = 0;
+            int i = 1;
+            do
+            {
+                if (i % 2 == 0)
+                {
+                    sum = sum + i;
+                }
+                i++;
+            }
+            while (i <= Number);
+        }
+
+        public static void ForQ12()
+        {
+            int Number = GetInteger("Enter a Number");
+            int sum = 0;
+            for (int i = 1; i <= Number; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    sum = sum + i;
+                }
+            }
+            Console.WriteLine("The sum of numbers is:" + sum);
+        }
+
+        public static void WhileQ12()
+        {
+            int Number = GetInteger("Enter a Number");
+            int sum = 0;
+            int i = 1;
+            while (i <= Number)
+            {
+                if (i % 2 != 0)
+                {
+                    sum = sum + i;
+                }
+                i++;
+            }
+            Console.WriteLine("The sum of numbers is:" + sum);
+        }
+
+        public static void DoQ12()
+        {
+            int Number = GetInteger("Enter a Number");
+            int sum = 0;
+            int i = 1;
+            do
+            {
+                if (i % 2 != 0)
+                {
+                    sum = sum + i;
+                }
+                i++;
+            }
+            while (i <= Number);
+        }
+
+        public static void ForQ13()
+        {
+            int LastNumber = GetInteger("Enter a LastNumber");
+            int K = GetInteger("Enter the multiple value:");
+            int sum = 0;
+            for (int i = 1; i <= LastNumber; i++)
+            {
+                sum = sum + i * K;
+            }
+            Console.WriteLine("The sum of all multiples of K is:"+sum);
+        }
+
+        public static void WhileQ13()
+        {
+            int LastNumber = GetInteger("Enter a LastNumber");
+            int K = GetInteger("Enter the multiple value:");
+            int sum = 0;
+            int i = 1;
+            while (i <= LastNumber)
+            {
+                sum = sum + i * K;
+                i++;
+            }
+            Console.WriteLine("The sum of all multiples of K is:" + sum);
+        }
+
+        public static void DoQ13()
+        {
+            int LastNumber = GetInteger("Enter a LastNumber");
+            int K = GetInteger("Enter the multiple value:");
+            int sum = 0;
+            int i = 1;
+            do
+            {
+                sum = sum + i * K;
+                i++;
+            }
+            while (i <= LastNumber);
+        }
+
+        public static void ForQ14()
+        {
+            int Number = GetInteger("Enter a Number");
+            if (Number % 3 == 0 && Number%5==0)
+            {
+                Console.WriteLine("FizzBuzz");
+            }
+            else if (Number % 3 == 0)
+            {
+                Console.WriteLine("Fizz");
+            }
+            else if (Number % 5 == 0)
+            {
+                Console.WriteLine("Buzz");
+            }
+            else
+            {
+                for (int i = 1; i <= Number; i++)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+        }
+
+        public static void WhileQ14()
+        {
+            int Number = GetInteger("Enter a Number");
+            int i = 1;
+            if (Number % 3 == 0 && Number % 5 == 0)
+            {
+                Console.WriteLine("FizzBuzz");
+            }
+            else if (Number % 3 == 0)
+            {
+                Console.WriteLine("Fizz");
+            }
+            else if (Number % 5 == 0)
+            {
+                Console.WriteLine("Buzz");
+            }
+            else
+            {
+                while (i <= Number)
+                {
+                    Console.WriteLine(i);
+                    i++;
+                }
+
+            }
+
+        }
+
+        public static void DoQ14()
+        {
+            int Number = GetInteger("Enter a Number");
+            int i = 1;
+            if (Number % 3 == 0 && Number % 5 == 0)
+            {
+                Console.WriteLine("FizzBuzz");
+            }
+            else if (Number % 3 == 0)
+            {
+                Console.WriteLine("Fizz");
+            }
+            else if (Number % 5 == 0)
+            {
+                Console.WriteLine("Buzz");
+            }
+            else
+            {
+                do
+                {
+                    Console.WriteLine(i);
+                    i++;
+                }
+                while (i <= Number);
+            }
+        }
+
+        public static void ForQ15()
+        {
+            int Number = GetInteger("Enter a Number");
+            int Fact = 1;
+            for (int i = 1; i <= Number; i++)
+            {
+                Fact = Fact * i;
+            }
+            Console.WriteLine("The factorial of the given number is:"+Fact);
+        }
+
+        public static void WhileQ15()
+        {
+            int Number = GetInteger("Enter a Number");
+            int Fact = 1;
+            int i = 1;
+            while (i <= Number)
+            {
+                Fact = Fact * i;
+                i++;
+            }
+            Console.WriteLine("The factorial of the given number is:" + Fact);
+        }
+
+        public static void DoQ15()
+        {
+            int Number = GetInteger("Enter a Number");
+            int Fact = 1;
+            int i = 1;
+            do
+            {
+                Fact = Fact * i;
+                i++;
+            }
+            while (i <= Number);
+            Console.WriteLine("The factorial of the given number is:" + Fact);
         }
     }
  }
