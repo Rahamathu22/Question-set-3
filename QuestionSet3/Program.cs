@@ -10,7 +10,7 @@ namespace QuestionSet3
     {
         static void Main(string[] args)
         {
-            WhileQ18();
+             WhileQ20();
         }
 
         public static int GetInteger(string message)
@@ -802,6 +802,184 @@ namespace QuestionSet3
                         }
                 }
             }
+        }
+
+        public static void ForQ19()
+        {
+            int ComCount = 0;
+            int UserCount = 0;
+            int Rounds = GetInteger("Enter the number of rounds(3 or 5 or 7):");
+            Console.WriteLine("1.Rock");
+            Console.WriteLine("2.Paper");
+            Console.WriteLine("3.scissor");
+            for (int i = 1; i <= Rounds; i++)
+            {
+                int value = GetInteger("Enter the number to select your choice:");
+                Random r = new Random();
+                int random = r.Next(1, 4);
+                if (random == value)
+                {
+                    Console.WriteLine("Match Draw");
+                }
+                else if (random == 1 && value == 3)
+                {
+                    Console.WriteLine("Computer Win");
+                    ComCount++;
+                }
+                else if (random == 2 && value == 1)
+                {
+                    Console.WriteLine("Computer Win");
+                    ComCount++;
+                }
+                else if (random == 3 && value == 2)
+                {
+                    Console.WriteLine("Computer Win");
+                    ComCount++;
+                }
+                else
+                {
+                    Console.WriteLine("You Win");
+                    UserCount++;
+                }
+            }
+            Console.WriteLine("Your Score:"+UserCount);
+            Console.WriteLine("Computer Score:"+ComCount);
+        }
+
+        public static void WhileQ19()
+        {
+            int i = 1;
+            int ComCount = 0;
+            int UserCount = 0;
+            int Rounds = GetInteger("Enter the number of rounds(3 or 5 or 7):");
+            Console.WriteLine("1.Rock");
+            Console.WriteLine("2.Paper");
+            Console.WriteLine("3.scissor");
+            while(i<=Rounds)
+            {
+                int value = GetInteger("Enter the number to select your choice:");
+                Random r = new Random();
+                int random = r.Next(1, 4);
+                if (random == value)
+                {
+                    Console.WriteLine("Match Draw");
+                }
+                else if (random == 1 && value == 3)
+                {
+                    Console.WriteLine("Computer Win");
+                    ComCount++;
+                }
+                else if (random == 2 && value == 1)
+                {
+                    Console.WriteLine("Computer Win");
+                    ComCount++;
+                }
+                else if (random == 3 && value == 2)
+                {
+                    Console.WriteLine("Computer Win");
+                    ComCount++;
+                }
+                else
+                {
+                    Console.WriteLine("You Win");
+                    UserCount++;
+                }
+                i++;
+            }
+            Console.WriteLine("Your Score:" + UserCount);
+            Console.WriteLine("Computer Score:" + ComCount);
+        }
+
+        public static void DoQ19()
+        {
+            int i = 1;
+            int ComCount = 0;
+            int UserCount = 0;
+            int Rounds = GetInteger("Enter the number of rounds(3 or 5 or 7):");
+            Console.WriteLine("1.Rock");
+            Console.WriteLine("2.Paper");
+            Console.WriteLine("3.scissor");
+            do
+            {
+                int value = GetInteger("Enter the number to select your choice:");
+                Random r = new Random();
+                int random = r.Next(1, 4);
+                if (random == value)
+                {
+                    Console.WriteLine("Match Draw");
+                }
+                else if (random == 1 && value == 3)
+                {
+                    Console.WriteLine("Computer Win");
+                    ComCount++;
+                }
+                else if (random == 2 && value == 1)
+                {
+                    Console.WriteLine("Computer Win");
+                    ComCount++;
+                }
+                else if (random == 3 && value == 2)
+                {
+                    Console.WriteLine("Computer Win");
+                    ComCount++;
+                }
+                else
+                {
+                    Console.WriteLine("You Win");
+                    UserCount++;
+                }
+                i++;
+            }
+            while (i <= Rounds);
+            Console.WriteLine("Your Score:" + UserCount);
+            Console.WriteLine("Computer Score:" + ComCount);
+        }
+
+        public static void WhileQ20()
+        {
+            Random r = new Random();
+            int ComChoice = r.Next(1, 21);
+            while (true)
+            {
+                int Value = GetInteger("Guess the number between 1 to 20:");
+                if (ComChoice == Value)
+                {
+                    Console.WriteLine("It is the correct Number");
+                    break;
+                }
+                else if (ComChoice < Value)
+                {
+                    Console.WriteLine("Your number is greater than the guessing number");
+                }
+                else if (ComChoice > Value)
+                {
+                    Console.WriteLine("Your number is lesser than the guessing number");
+                }
+            }
+        }
+
+        public static void DoQ20()
+        {
+            Random r = new Random();
+            int ComChoice = r.Next(1, 21);
+            do
+            {
+                int Value = GetInteger("Guess the number between 1 to 20:");
+                if (ComChoice == Value)
+                {
+                    Console.WriteLine("It is the correct Number");
+                    break;
+                }
+                else if (ComChoice < Value)
+                {
+                    Console.WriteLine("Your number is greater than the guessing number");
+                }
+                else if (ComChoice > Value)
+                {
+                    Console.WriteLine("Your number is lesser than the guessing number");
+                }
+            }
+            while (true);
         }
     }
  }
